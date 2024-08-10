@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #141E30, #243B55);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+.robot {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: #8A99A6;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.robot-eyes {
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0FF;
+    position: relative;
+}
+
+.robot-mouth {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 15px #0FF;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0FF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0FF;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #06C;
+}
+
+#login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#login-form .input-container {
+    margin-bottom: 20px;
+}
+
+#login-form p {
+    margin-top: 20px;
+    color: red;
+    display: block;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    20%, 60% { transform: translateX(-50%) translateY(-5px); }
+    40%, 80% { transform: translateX(-50%) translateY(5px); }
+}
+
+.robot.shake {
+    animation: shake 0.5s ease-in-out;
+}
