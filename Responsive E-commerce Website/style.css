@@ -1,0 +1,246 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #FFEB3B;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFEB3B;
+}
+
+.cart a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cart a:hover {
+    color: #FFEB3B;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(to right, #FF5733, #FFC300);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF5733;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFC300;
+    transform: translateY(-3px);
+}
+
+/* Products Section */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFEB3B;
+    animation: fadeIn 2s ease-in;
+}
+
+.products h2 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #FFC300;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #FF5733;
+}
+
+.product-card p {
+    margin: 10px 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #FFC300;
+    transform: translateY(-3px);
+}
+
+/* About and Contact Sections */
+.about, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: #fff;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.about h2, .contact h2 {
+    margin-bottom: 20px;
+    color: #FFEB3B;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+}
