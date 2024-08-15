@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+}
+
+header {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    animation: gradientBackground 8s infinite alternate;
+    padding: 40px 0;
+}
+
+.animated-title {
+    font-size: 2.5rem;
+    animation: fadeInUp 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: none;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    background: linear-gradient(to right, #f857a6, #ff5858);
+    color: white;
+}
+
+.movie-card:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    transition: transform 0.4s ease;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.movie-card:hover img {
+    transform: scale(1.15);
+}
+
+.btn-animated {
+    background-color: #4facfe;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.btn-animated:hover {
+    background-color: #00f2fe;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+@keyframes gradientBackground {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #333;
+    font-size: 0.9rem;
+}
