@@ -1,0 +1,245 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+  }
+  
+  .menu {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  .menu-item {
+    padding: 8rem 0;
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: flex-grow .3s ease;
+    
+    
+    .logo-image {
+      width: 250px;
+      transition: width .3s ease;
+    }
+   
+    .line {
+      height: 3px;
+      width: 20px;
+      background-color: white;
+      margin: 1rem auto;
+      transition: width .4s ease;
+    }
+    
+    .smoke {
+      display: none;
+    }
+  
+    
+    &.active {
+       flex: 2 1 auto;
+      opacity: 1;
+      padding: 6rem 0;
+      
+      .logo-image {
+        width: 300px;
+      }
+      
+      .smoke {
+        display: block;
+      }
+      
+      .line {
+        width: 250px
+      }
+      
+      .button {
+        display: block;
+      }
+      
+      .image {
+        display: block;
+        animation: zoomInBlur 16s infinite;
+      }
+    }
+  }
+  
+  .image {
+       background-size: cover;
+    background-position: center center;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    display: none;
+    }
+  
+  .button {
+    position: absolute;
+    padding: 4px 84px;
+    bottom: 40%;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    display: none;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  .warzone {
+    .image {
+         background-image: url('https://store-images.s-microsoft.com/image/apps.5292.13835473807186336.9510cd97-f71a-49b0-9e5c-0877f4bc9de3.b5893ca4-bb2d-4329-9be4-41bb1829ee84?mode=scale&q=90&h=1080&w=1920&background=%23FFFFFF');
+      }
+    
+    .logo-image {
+      filter: invert(1);
+    }
+  }
+  
+  .modern-warfare {
+     .image {
+         background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/ls/LSDF4YWJXM5I1575407576482.jpg');
+      }
+  }
+  
+  .cold-war {
+      .image {
+        background-image: url('https://store-images.s-microsoft.com/image/apps.52829.14107985044965209.e8fed65f-093d-40d1-849f-6c564d2ad876.8fe14720-2b8f-4b9c-aebf-07f1610816d5?mode=scale&q=90&h=1080&w=1920');
+      }
+  }
+  
+  .button--purchase {
+    background-color: yellow;
+  }
+  
+  .active-background {
+    .background-image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: -2;
+      opacity: .4;
+      filter: blur(3px);
+    }
+    
+    .background-overlay {
+      background-image: url('https://s3.medialoot.com/images/quick-tip-illustrator-grunge/free_texture_download.jpg');
+      z-index: -1;
+      filter: invert(1);
+      mix-blend-mode: screen;
+      opacity: 0.2;
+    }
+  }
+  
+  .background {
+     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+  }
+  
+  .smoke {
+    content: "";
+    width: 300px;
+    height: 200px;
+    background-image: url("https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/kronos/home/common/smoke.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    position: absolute;
+    -webkit-animation: 10s ease-out smoke infinite;
+    animation: 10s ease-out smoke infinite;
+    left: 40%;
+    top: 65%;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+  }
+  .smoke.two {
+    -webkit-animation: 10s ease-out smoke infinite 5s;
+    animation: 10s ease-out smoke infinite 5s;
+  }
+  .smoke.three {
+    -webkit-animation: 10s ease-out smoke-two infinite 2s;
+    animation: 10s ease-out smoke-two infinite 2s;
+    left: 20%;
+    top: 65%;
+  }
+  .smoke.four {
+    -webkit-animation: 10s ease-out smoke-two infinite 7s;
+    animation: 10s ease-out smoke-two infinite 7s;
+    left: 15%;
+    top: 65%;
+  }
+  .animate .smoke {
+    opacity: 0;
+    -webkit-animation: none;
+    animation: none;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+  
+  
+  @keyframes zoomInBlur {
+    0% {
+      transform: scale(1);
+      filter: blur(10px);
+    }
+    
+    5% {
+      filter: blur(0px);
+    }
+    
+    95%,98% {
+      transform: scale(1.2);
+      filter: blur(0px);
+    }
+    
+    100% {
+      filter: blur(20px);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes smoke {
+    0% {
+      -webkit-transform: rotate(0deg) scale(5) translateY(0px) translateX(80px);
+      transform: rotate(0deg) scale(5) translateY(0px) translateX(80px);
+      opacity: 0;
+    }
+    20%,
+    80% {
+      opacity: .8;
+    }
+    100% {
+      -webkit-transform: rotate(0deg) scale(5) translateY(-100px) translateX(120px);
+      transform: rotate(0deg) scale(5) translateY(-100px) translateX(120px);
+      opacity: 0;
+    }
+  }
+   
+  @keyframes smoke-two {
+    0% {
+      -webkit-transform: rotate(180deg) scale(5) translateY(0) translateX(0px);
+      transform: rotate(180deg) scale(5) translateY(0) translateX(0px);
+      opacity: 0;
+    }
+    20%,
+    80% {
+      opacity: .8;
+    }
+    100% {
+      -webkit-transform: rotate(180deg) scale(5) translateY(80px) translateX(50px);
+      transform: rotate(180deg) scale(5) translateY(80px) translateX(50px);
+      opacity: 0;
+    }
+  }
