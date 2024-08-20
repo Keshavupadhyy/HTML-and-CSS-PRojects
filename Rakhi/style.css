@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow-x: hidden;
+}
+
+.hero {
+    background: #ff6f61;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #fbd786;
+    animation: backgroundShift 10s infinite alternate;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin: 0;
+    animation: fadeIn 2s ease-out, textBounce 1s infinite;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    animation: fadeIn 2s 0.5s ease-out;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: buttonPulse 2s infinite;
+}
+
+.button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+    animation: fadeInSection 2s ease-in;
+}
+
+.greeting-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    animation: cardAnimation 1s ease-in-out;
+}
+
+.greeting-card h2 {
+    margin-top: 0;
+    color: #ff6f61;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.greeting-card p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.greeting-card img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    animation: imageZoom 1.5s ease-in-out infinite;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        background-color: #333;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #555;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #333;
+    }
+}
+
+@keyframes cardAnimation {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes imageZoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background: #ff6f61;
+    }
+    100% {
+        background: #ff8c00;
+    }
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
