@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat UI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 350px;
+            height: 600px;
+            background-color: #e5ddd5;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: #075E54;
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .chat-header h2 {
+            font-size: 18px;
+            margin: 0;
+            flex: 1;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .message.sent {
+            justify-content: flex-end;
+        }
+
+        .message.received {
+            justify-content: flex-start;
+        }
+
+        .message .bubble {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            word-wrap: break-word;
+        }
+
+        .message.sent .bubble {
+            background-color: #dcf8c6;
+            border-bottom-right-radius: 0;
+        }
+
+        .message.received .bubble {
+            background-color: #ffffff;
+            border-bottom-left-radius: 0;
+        }
+
+        .chat-input {
+            background-color: #ffffff;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #f2f2f2;
+            outline: none;
+        }
+
+        .chat-input button {
+            background-color: #075E54;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            margin-left: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .chat-input button:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="https://via.placeholder.com/40" alt="Profile Picture">
+            <h2>Chat with John</h2>
+        </div>
+        <div class="chat-messages">
+            <div class="message received">
+                <div class="bubble">
+                    Hey there! How are you doing?
+                </div>
+            </div>
+            <div class="message sent">
+                <div class="bubble">
+                    I'm doing great! How about you?
+                </div>
+            </div>
+            <div class="message received">
+                <div class="bubble">
+                    I'm good, thanks for asking!
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type a message">
+            <button>&#9658;</button>
+        </div>
+    </div>
+</body>
+</html>
