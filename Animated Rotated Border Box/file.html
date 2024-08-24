@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Rotated Border Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+        }
+
+        .rotated-box {
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        .rotated-box::before,
+        .rotated-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-radius: 10px;
+            box-sizing: border-box;
+            animation: rotate-box 4s infinite linear;
+        }
+
+        .rotated-box::before {
+            border-color: #FF5733;
+            transform: rotate(45deg);
+        }
+
+        .rotated-box::after {
+            border-color: #33FF57;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes rotate-box {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rotated-box"></div>
+</body>
+</html>
