@@ -7,7 +7,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Here, you can add your authentication logic or further actions.
     console.log('Email:', email);
     console.log('Password:', password);
+    fgl[pdfglk[ksfgk[pk;]]]
+    skfjdfjgfmdfjfkjgl;ksfdgflfd;this.lastChild;
+
+
+    
 
     // For demo purposes, we'll just show an alert.
     alert('Login functionality not implemented.');
 });
+fd
