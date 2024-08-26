@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Client UI Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Email</h2>
+                <button class="compose-btn">Compose</button>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><i class="icon-inbox"></i> Inbox</li>
+                <li><i class="icon-starred"></i> Starred</li>
+                <li><i class="icon-sent"></i> Sent</li>
+                <li><i class="icon-drafts"></i> Drafts</li>
+                <li><i class="icon-trash"></i> Trash</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <input type="text" class="search-bar" placeholder="Search mail">
+                <div class="header-actions">
+                    <button class="refresh-btn">Refresh</button>
+                    <button class="more-btn">More</button>
+                </div>
+            </header>
+            
+            <!-- Email List -->
+            <section class="email-list">
+                <article class="email-item">
+                    <div class="email-sender">John Doe</div>
+                    <div class="email-subject">Meeting at 3 PM</div>
+                    <div class="email-date">Aug 26</div>
+                </article>
+                <article class="email-item">
+                    <div class="email-sender">Jane Smith</div>
+                    <div class="email-subject">Project Update</div>
+                    <div class="email-date">Aug 25</div>
+                </article>
+                <article class="email-item">
+                    <div class="email-sender">Company XYZ</div>
+                    <div class="email-subject">Newsletter - August Edition</div>
+                    <div class="email-date">Aug 24</div>
+                </article>
+                <!-- Repeat for more emails -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>
