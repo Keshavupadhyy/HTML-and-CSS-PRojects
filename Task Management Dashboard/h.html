@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Task Management Dashboard</h1>
+            <button id="addTaskBtn">Add New Task</button>
+        </header>
+        <div class="board">
+            <div class="column todo" data-status="todo">
+                <h2>To Do</h2>
+                <div class="task" draggable="true" id="task1">
+                    <h3>Task 1</h3>
+                    <p>High Priority - Deadline: 2024-09-01</p>
+                </div>
+                <div class="task" draggable="true" id="task2">
+                    <h3>Task 2</h3>
+                    <p>Medium Priority - Deadline: 2024-09-05</p>
+                </div>
+            </div>
+            <div class="column in-progress" data-status="in-progress">
+                <h2>In Progress</h2>
+            </div>
+            <div class="column done" data-status="done">
+                <h2>Done</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Adding New Task -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <label for="taskTitle">Task Title:</label>
+                <input type="text" id="taskTitle" name="taskTitle" required>
+                
+                <label for="taskPriority">Priority:</label>
+                <select id="taskPriority" name="taskPriority" required>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                
+                <label for="taskDeadline">Deadline:</label>
+                <input type="date" id="taskDeadline" name="taskDeadline" required>
+                
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
