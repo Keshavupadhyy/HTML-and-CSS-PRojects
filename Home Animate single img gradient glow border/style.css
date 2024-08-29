@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Background color to enhance the glow effect */
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Spacing between images */
+    width: 80%;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+.container {
+    position: relative;
+}
+
+.glow-img {
+    width: 100%; /* Adjust to fit the container */
+    height: auto;
+    border: 5px solid transparent;
+    border-radius: 10px; /* Rounded corners, adjust as needed */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.5);
+    animation: glow-animation 1.5s infinite alternate;
+}
+
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.7), 0 0 50px rgba(0, 255, 255, 0.7);
+    }
+}
