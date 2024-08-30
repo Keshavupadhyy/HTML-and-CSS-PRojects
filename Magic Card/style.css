@@ -78,7 +78,7 @@
     filter: blur(calc(var(--card-height) / 6));
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
+      , #b1bd12, #ec0d0d 43%, #4e00c2);
       opacity: 1;
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;
