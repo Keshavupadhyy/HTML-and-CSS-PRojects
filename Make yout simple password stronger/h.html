@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Make your simple password stronger</h1>
+    <div class="password__content">
+      <div class="password__content--flex">
+        <input id="input" type="text" class="password__content--input" maxlength="20">
+        <button id="button" onclick="generatePass()" class="password__content--button">GO</button>
+      </div>
+      <div class="password__content--checkbox">
+        <input type="checkbox" id="letterToNumber" name="" value="">
+        <label for="letterToNumber"><span class="never-select">convert Some letters to number</span></label>
+      </div>
+      <div class="password__content--checkbox">
+        <input type="checkbox" id="enableUpperCase" name="" value="">
+        <label for="enableUpperCase"><span class="never-select">Enable random UpperCase</span></label>
+      </div>
+      <div class="password__content--result">
+        <span id="result"></span>
+        <button id="copyButton" onclick="copyResult()">COPY</button>
+      </div>
+      <div id="copied" class="password__content--copied">
+        copied
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="title">
+      Made with ♥ by Keshav Upadhyay
+    </div>
+    <div class="sub">
+     <a href="hhttps://www.instagram.com/in.keshav/#" target=”_blank”>instagram: in.keshav</a>
+     <span>|</span>
+     <a href="https://x.com/Phoenix_keshav" target=”_blank”> twitter: Phoenix_keshav</a>
+    </div>
+  </div>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
