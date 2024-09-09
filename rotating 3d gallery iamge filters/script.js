@@ -27,4 +27,4 @@ function updateGallery() {
     }, 3000)
 }
 
-updateGallery();
+updateGallery();7 
